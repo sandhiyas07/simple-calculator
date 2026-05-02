@@ -1,29 +1,66 @@
-# Simple Calculator
+# 🧮 Simple Calculator
 
-A clean, beginner-friendly calculator built with HTML, CSS, and JavaScript.
+A beginner-friendly calculator built using **HTML, CSS, and JavaScript**.  
+This project performs basic arithmetic operations with a clean and simple user interface.
 
-## Features
-- Addition, subtraction, multiplication, division
-- Percent and sign toggle
-- Division by zero error handling
-- Keyboard support
-- Chained calculations
-- Expression history display
+---
 
-## How to Run
-Just open `index.html` in any browser — no setup needed.
+## 🚀 Features
 
-## Files
-```
-calculator/
-├── index.html   # Structure
-├── style.css    # Styling
-└── script.js    # Logic
-```
+- ➕ Addition
+- ➖ Subtraction
+- ✖️ Multiplication
+- ➗ Division
+- 🧹 Clear screen button
+- ⚡ Fast and responsive design
 
-## Ideas to Improve Later
-- [ ] History log of past calculations
-- [ ] Scientific mode (sin, cos, √)
-- [ ] Dark/light theme toggle
-- [ ] Animations on result display
-- [ ] Unit converter (km to miles, etc.)
+---
+
+## 🛠️ Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## 📂 Project Structure
+
+
+simple-calculator/
+│── index.html
+│── style.css
+│── script.js
+
+
+---
+
+## ▶️ How to Run
+
+1. Download or clone this repository  
+2. Open the project folder  
+3. Double-click on `index.html`  
+4. The calculator will open in your browser  
+
+---
+
+## 📸 Screenshot
+
+
+
+---
+
+## 💡 Future Improvements
+
+- Add keyboard support  
+- Improve UI design  
+- Add scientific calculator functions  
+- Add dark mode  
+
+---
+
+## 🙌 Acknowledgement
+
+This project is created as part of learning JavaScript basics and improving frontend skills.
+
+---
