@@ -46,6 +46,7 @@ simple-calculator/
 
 ## 📸 Screenshot
 
+<img width="720" height="1612" alt="WhatsApp Image 2026-05-02 at 3 34 44 PM" src="https://github.com/user-attachments/assets/1fe6b7da-a95e-4d3f-9bbf-f3d20b10d68e" />
 
 
 ---
