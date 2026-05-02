@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+
+  <!-- Link to our CSS file for styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 
+    CALCULATOR STRUCTURE
+    The whole calculator sits inside one wrapper div.
+    Inside it: a display (screen) + a grid of buttons.
+  -->
+  <div class="calculator">
+
+    <!-- DISPLAY SECTION -->
+    <div class="display">
+      <!-- Shows the equation being typed, e.g. "8 + 3" -->
+      <div class="expression" id="expression"></div>
+
+      <!-- Shows the current number or result -->
+      <div class="result" id="result">0</div>
+    </div>
+
+    <!-- BUTTON GRID -->
+    <div class="buttons">
+
+      <!-- ROW 1: Clear, Plus/Minus toggle, Percent, Divide -->
+      <button class="btn btn-clear" onclick="clearAll()">AC</button>
+      <button class="btn btn-special" onclick="toggleSign()">+/-</button>
+      <button class="btn btn-special" onclick="inputPercent()">%</button>
+      <button class="btn btn-operator" onclick="inputOperator('/')">÷</button>
+
+      <!-- ROW 2: 7, 8, 9, Multiply -->
+      <button class="btn" onclick="inputNumber('7')">7</button>
+      <button class="btn" onclick="inputNumber('8')">8</button>
+      <button class="btn" onclick="inputNumber('9')">9</button>
+      <button class="btn btn-operator" onclick="inputOperator('*')">×</button>
+
+      <!-- ROW 3: 4, 5, 6, Subtract -->
+      <button class="btn" onclick="inputNumber('4')">4</button>
+      <button class="btn" onclick="inputNumber('5')">5</button>
+      <button class="btn" onclick="inputNumber('6')">6</button>
+      <button class="btn btn-operator" onclick="inputOperator('-')">−</button>
+
+      <!-- ROW 4: 1, 2, 3, Add -->
+      <button class="btn" onclick="inputNumber('1')">1</button>
+      <button class="btn" onclick="inputNumber('2')">2</button>
+      <button class="btn" onclick="inputNumber('3')">3</button>
+      <button class="btn btn-operator" onclick="inputOperator('+')">+</button>
+
+      <!-- ROW 5: 0 (wide), Decimal, Equals -->
+      <button class="btn btn-zero" onclick="inputNumber('0')">0</button>
+      <button class="btn" onclick="inputDecimal()">.</button>
+      <button class="btn btn-equals" onclick="calculate()">=</button>
+
+    </div>
+  </div>
+
+  <!-- Link to our JavaScript file for logic -->
+  <script src="script.js"></script>
+</body>
+</html>

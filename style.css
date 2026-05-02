@@ -1,0 +1,167 @@
+/* ===========================
+   CALCULATOR — style.css
+   =========================== */
+
+/* --- RESET & BASE STYLES ---
+   Removes default browser spacing and sets box-sizing
+   so padding is included in element width/height. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- PAGE LAYOUT ---
+   Centers the calculator on the screen using flexbox. */
+body {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;        /* vertical center */
+  min-height: 100vh;          /* full viewport height */
+  background: #1a1a2e;        /* deep navy background */
+  font-family: 'SF Pro Display', 'Segoe UI', sans-serif;
+}
+
+/* --- CALCULATOR WRAPPER ---
+   The outer shell of the calculator. */
+.calculator {
+  width: 320px;
+  background: #16213e;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- DISPLAY SECTION --- */
+.display {
+  background: #0f3460;
+  border-radius: 16px;
+  padding: 20px 24px 16px;
+  margin-bottom: 20px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  /* align text to bottom of display */
+  align-items: flex-end;      /* align text to right side */
+  overflow: hidden;
+}
+
+/* Small text that shows the equation (e.g., "8 + 3 =") */
+.expression {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  min-height: 20px;
+  word-break: break-all;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+/* Large number shown on screen */
+.result {
+  font-size: 48px;
+  font-weight: 300;
+  color: #e2e8f0;
+  word-break: break-all;
+  text-align: right;
+  line-height: 1.1;
+  /* Shrink text if number is too long */
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Make result text smaller if it gets long */
+.result.small-text {
+  font-size: 32px;
+}
+
+/* --- BUTTON GRID ---
+   4 columns, equal size buttons, with a gap between them. */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* --- BASE BUTTON STYLE ---
+   Applies to every button. Individual types override below. */
+.btn {
+  height: 68px;
+  border: none;
+  border-radius: 50%;          /* makes buttons circular */
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  background: #1a1a2e;
+  color: #e2e8f0;
+  transition: all 0.1s ease;   /* smooth hover/click animation */
+  user-select: none;
+}
+
+/* Button hover effect */
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+/* Button click effect — pushes button inward */
+.btn:active {
+  transform: scale(0.93);
+  filter: brightness(0.9);
+}
+
+/* --- CLEAR BUTTON (AC) --- */
+.btn-clear {
+  background: #e74c3c;
+  color: white;
+  font-weight: 600;
+}
+
+/* --- SPECIAL BUTTONS (+/- and %) --- */
+.btn-special {
+  background: #2d3561;
+  color: #a8b2ff;
+}
+
+/* --- OPERATOR BUTTONS (÷ × − +) --- */
+.btn-operator {
+  background: #e67e22;
+  color: white;
+  font-weight: 500;
+}
+
+/* Highlight an operator when it's been selected */
+.btn-operator.active {
+  background: #f39c12;
+  box-shadow: 0 0 16px rgba(230, 126, 34, 0.5);
+}
+
+/* --- ZERO BUTTON (0) ---
+   Spans 2 columns and has pill shape instead of circle. */
+.btn-zero {
+  grid-column: span 2;        /* takes up 2 columns */
+  border-radius: 34px;         /* pill shape */
+  text-align: left;
+  padding-left: 24px;
+  font-size: 20px;
+}
+
+/* --- EQUALS BUTTON (=) --- */
+.btn-equals {
+  background: #27ae60;
+  color: white;
+  font-weight: 600;
+}
+
+/* --- ERROR STATE ---
+   Red flash when there's an error (e.g. divide by zero). */
+.display.error .result {
+  color: #ff6b6b;
+  animation: shake 0.3s ease;
+}
+
+/* Small shake animation on error */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
